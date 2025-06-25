@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-casino-darker: #10202d;
+  --color-casino-dark: #152535;
+  --color-casino-mid: #1c2e3d;
+  --color-casino-light: #223444;
+  --color-casino-lighter: #273847;
+  --color-casino-blue: #0f70dc;
+  --color-lavander-text: #c1c9e5;
+}
+
 body {
   font-family: var(--font-poppins), sans-serif;
 }
