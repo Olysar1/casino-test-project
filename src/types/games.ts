@@ -1,36 +1,38 @@
-type TProviders =
-  | "bgaming"
-  | "gamebeat"
-  | "pragmaticplay"
-  | "netent"
-  | "playtech";
+export enum ProvidersEnum {
+  BGAMING = "bgaming",
+  GAMEBEAT = "gamebeat",
+  PRAGMATICPLAY = "pragmaticplay",
+  NETENT = "netent",
+  PLAYTECH = "playtech",
+}
 
-type TCategories =
-  | "slots"
-  | "blackjack"
-  | "roulette"
-  | "live"
-  | "baccarat"
-  | "crash"
-  | "dice"
-  | "video-poker"
-  | "books"
-  | "bonus-buy"
-  | "fruits"
-  | "hot"
-  | "featured-games"
-  | "new-releases"
-  | "hot-games";
+export enum CategoriesEnum {
+  SLOTS = "slots",
+  BLACKJACK = "blackjack",
+  ROULETTE = "roulette",
+  LIVE = "live",
+  BACCARAT = "baccarat",
+  CRASH = "crash",
+  DICE = "dice",
+  VIDEO_POKER = "video-poker",
+  BOOKS = "books",
+  BONUS_BUY = "bonus-buy",
+  FRUITS = "fruits",
+  HOT = "hot",
+  FEATURED_GAMES = "featured-games",
+  NEW_RELEASES = "new-releases",
+  HOT_GAMES = "hot-games",
+}
 
 export interface IGame {
   id: number;
   name: string;
-  provider: TProviders;
+  provider: ProvidersEnum;
   identifier: string;
   type: number;
   demo: number;
   image: string;
-  categories: TCategories[];
+  categories: CategoriesEnum[];
 }
 
 export interface IPagination {
@@ -45,8 +47,8 @@ export interface IPagination {
 }
 
 export interface IFiltersApplied {
-  providers: TProviders[];
-  categories: TCategories[];
+  providers: ProvidersEnum[];
+  categories: CategoriesEnum[];
   search: string;
 }
 
