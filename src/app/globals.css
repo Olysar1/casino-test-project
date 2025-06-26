@@ -10,6 +10,16 @@
   --color-lavander-text: #c1c9e5;
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 body {
   font-family: var(--font-poppins), sans-serif;
 }
