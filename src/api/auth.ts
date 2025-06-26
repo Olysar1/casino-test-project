@@ -15,6 +15,6 @@ export const fetchUser = (): Promise<IUser> => {
         email: "testmail@mail.com",
         balance: 500,
       });
-    }, 1000)
+    }, 2000)
   );
 };
