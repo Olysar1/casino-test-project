@@ -3,6 +3,7 @@ import { BonusBuySection } from "@/components/BonusBuySection";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { FiltersSection } from "@/components/FiltersSection";
 import { HotGamesSection } from "@/components/HotGamesSection";
+import { LiveGamesSection } from "@/components/LiveGamesSection";
 import { NewReleasesSection } from "@/components/NewReleasesSection";
 import WithCarouselSuspense from "@/hocs/WithCarouselSuspense";
 
@@ -22,6 +23,9 @@ export default function Home() {
       </WithCarouselSuspense>
       <WithCarouselSuspense>
         <BonusBuySection />
+      </WithCarouselSuspense>
+      <WithCarouselSuspense>
+        <LiveGamesSection />
       </WithCarouselSuspense>
     </div>
   );
