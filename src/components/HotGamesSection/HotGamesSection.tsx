@@ -8,7 +8,7 @@ const HotGamesSection = () => {
   });
 
   return (
-    <Carousel games={hotGames} icon="/svg/flame-icon.svg" title="Hot Games" />
+    <Carousel list={hotGames} icon="/svg/flame-icon.svg" title="Hot Games" />
   );
 };
 

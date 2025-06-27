@@ -5,6 +5,7 @@ import { FiltersSection } from "@/components/FiltersSection";
 import { HotGamesSection } from "@/components/HotGamesSection";
 import { LiveGamesSection } from "@/components/LiveGamesSection";
 import { NewReleasesSection } from "@/components/NewReleasesSection";
+import { ProvidersSection } from "@/components/ProvidersSection";
 import WithCarouselSuspense from "@/hocs/WithCarouselSuspense";
 
 export default function Home() {
@@ -26,6 +27,10 @@ export default function Home() {
       </WithCarouselSuspense>
       <WithCarouselSuspense>
         <LiveGamesSection />
+      </WithCarouselSuspense>
+      <WithCarouselSuspense>
+        {/* here we do not need suspense actually. but in theory the providers will also be fetched therefore we need it */}
+        <ProvidersSection />
       </WithCarouselSuspense>
     </div>
   );

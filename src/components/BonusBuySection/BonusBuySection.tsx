@@ -9,7 +9,7 @@ const BonusBuySection = () => {
 
   return (
     <Carousel
-      games={bonusBuy}
+      list={bonusBuy}
       icon="/svg/new-releases-icon.svg"
       title="New Releases"
     />

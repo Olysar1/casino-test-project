@@ -9,7 +9,7 @@ const FeaturedSection = () => {
 
   return (
     <Carousel
-      games={featuredGames}
+      list={featuredGames}
       icon="/svg/crown-icon.svg"
       title="Featured Games"
     />

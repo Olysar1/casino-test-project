@@ -9,7 +9,7 @@ const LiveGamesSection = () => {
 
   return (
     <Carousel
-      games={liveGames}
+      list={liveGames}
       icon="/svg/poker-chips-icon.svg"
       title="Live Games"
     />

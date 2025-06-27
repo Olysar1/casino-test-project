@@ -9,7 +9,7 @@ const NewReleasesSection = () => {
 
   return (
     <Carousel
-      games={newReleases}
+      list={newReleases}
       icon="/svg/new-releases-icon.svg"
       title="New Releases"
     />

@@ -1,18 +1,26 @@
 "use client";
 
 import { IGame } from "@/types/games";
+import { IProvider } from "@/types/providers";
 import Image from "next/image";
 import React, { FC, useRef } from "react";
 import CarouselCard from "./CarouselCard";
+import CarouselProviderCard from "./CarouselProviderCard";
 import { useHorizontalScroll } from "@/hoooks/useHorizontalScroll";
 
 interface ICarouselProps {
   title: string;
   icon: string;
-  games: IGame[];
+  list: IGame[] | IProvider[];
+  forProviders?: boolean;
 }
 
-const Carousel: FC<ICarouselProps> = ({ title, icon, games }) => {
+const Carousel: FC<ICarouselProps> = ({
+  title,
+  icon,
+  list,
+  forProviders = false,
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { fullyScrolled, scrollLeft, scrollRight } = useHorizontalScroll({
     containerRef,
@@ -60,9 +68,13 @@ const Carousel: FC<ICarouselProps> = ({ title, icon, games }) => {
         className="overflow-x-scroll overflow-y-visible w-full no-scrollbar scroll-smooth"
       >
         <div className="flex items-center gap-2 py-2">
-          {games.map(({ id, name, image }) => (
-            <CarouselCard key={id} imageUrl={image} title={name} />
-          ))}
+          {list.map(({ id, name, image }) => {
+            return forProviders ? (
+              <CarouselProviderCard key={id} imageUrl={image} title={name} />
+            ) : (
+              <CarouselCard key={id} imageUrl={image} title={name} />
+            );
+          })}
         </div>
       </div>
     </div>
