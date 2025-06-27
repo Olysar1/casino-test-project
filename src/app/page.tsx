@@ -9,8 +9,8 @@ import WithCarouselSuspense from "@/hocs/WithCarouselSuspense";
 export default function Home() {
   return (
     <div className="w-full p-[10px] md:w-[700px] xl:w-[1200px] mx-auto flex flex-col items-center gap-[15px] lg:gap-[25px]">
-      <FiltersSection />
       <BannersSection />
+      <FiltersSection />
       <WithCarouselSuspense>
         <FeaturedSection />
       </WithCarouselSuspense>
