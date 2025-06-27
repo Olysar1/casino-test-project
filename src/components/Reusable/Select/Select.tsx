@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode, useEffect, useRef, useState } from "react";
 
 interface IOption {
   label: string;
@@ -22,6 +22,7 @@ const Select: FC<ISelectProps> = ({
   defaultValue,
   callback,
 }: ISelectProps): ReactNode => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(
     options.find((option) => option.key === defaultValue)?.label
@@ -37,8 +38,24 @@ const Select: FC<ISelectProps> = ({
     callback(prop ? prop.key : "");
   }, [selectedOption, callback, options]);
 
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <div className="w-full relative">
+    <div className="w-full relative" ref={containerRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between h-[40px] bg-casino-darker border border-casino-lighter rounded-[5px] px-[15px] py-[10px] text-white text-sm font-[14px] cursor-pointer"
