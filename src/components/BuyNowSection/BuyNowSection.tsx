@@ -18,9 +18,13 @@ const BuyNowSection = () => {
   return (
     <div className="flex flex-col items-center justify-between lg:flex-row w-full h-[255px] lg:h-[110px] bg-casino-darker rounded-[5px] p-[15px] lg:p-[25px]">
       <h2 className="text-[20px] font-bold text-center lg:text-left">
-        {"You don't have Crypto? No problem."}
+        <span>
+          {"You don't have Crypto?"}
+          <br />
+          No problem.
+        </span>
       </h2>
-      <div className="w-full flex flex-wrap items-center justify-center">
+      <div className="w-fit flex flex-wrap items-center justify-center">
         {paymentSystems.map(({ title, imageUrl }) => (
           <Image
             key={title}
