@@ -1,5 +1,6 @@
 import { BannersSection } from "@/components/BannersSection";
 import { BonusBuySection } from "@/components/BonusBuySection";
+import { BuyNowSection } from "@/components/BuyNowSection";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { FiltersSection } from "@/components/FiltersSection";
 import { HotGamesSection } from "@/components/HotGamesSection";
@@ -32,6 +33,7 @@ export default function Home() {
         {/* here we do not need suspense actually. but in theory the providers will also be fetched therefore we need it */}
         <ProvidersSection />
       </WithCarouselSuspense>
+      <BuyNowSection />
     </div>
   );
 }
