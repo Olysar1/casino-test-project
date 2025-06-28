@@ -29,8 +29,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <MobileFloatingMenu />
       </body>
-      <MobileFloatingMenu />
     </html>
   );
 }
