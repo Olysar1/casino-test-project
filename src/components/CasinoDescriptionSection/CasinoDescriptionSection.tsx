@@ -45,9 +45,9 @@ const CasinoDescriptionSection: FC = () => {
       />
       <button
         onClick={toggleExpand}
-        className="absolute z-2 left-0 right-0 m-auto bottom-[14px] lg:bottom-[19px] w-full md:w-[250px] h-[40px] uppercase rounded-[2px] bg-casino-blue cursor-pointer transition-all hover:scale-101 hover:bg-casino-blue/80"
+        className="absolute z-2 left-0 right-0 m-auto bottom-[14px] text-[12px] lg:text-[14px] lg:bottom-[19px] w-11/12 md:w-[250px] h-[40px] uppercase rounded-[2px] bg-casino-blue cursor-pointer transition-all hover:scale-101 hover:bg-casino-blue/80"
       >
-        read more
+        read {expanded ? "less" : "more"}
       </button>
     </div>
   );

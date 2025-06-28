@@ -3,8 +3,13 @@ import { FC } from "react";
 const Rights: FC = () => {
   return (
     <div className="w-full flex flex-col items-center gap-[20px] lggap-[25px] text-[14px] text-[#66788C] pb-[25px] lg:translate-y-[-40px]">
-      <h3>© 2025 CASINO.COM. All Rights Reserved.</h3>
-      <h4>GAMBLING CAN BE ADDICTIVE. PLAY RESPONSIBLY!</h4>
+      <h3 className="text-center">
+        © 2025 <span className="font-bold text-white">CASINO.COM</span>. All
+        Rights Reserved.
+      </h3>
+      <h4 className="text-center">
+        GAMBLING CAN BE ADDICTIVE. PLAY RESPONSIBLY!
+      </h4>
       <p className="text-[12px] text-center">
         CASINO casino is operated by CASINO B.V., ensuring a secure and fair
         gaming environment for all players. We strictly adhere to all regulatory
