@@ -30,13 +30,15 @@ const Select: FC<ISelectProps> = ({
 
   const handleSelect = (option: IOption) => {
     setSelectedOption(option.label);
+    callback(option.key);
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    const prop = options.find((option) => option.label === selectedOption);
-    callback(prop ? prop.key : "");
-  }, [selectedOption, callback, options]);
+  // useEffect(() => {
+  //   const prop = options.find((option) => option.label === selectedOption);
+  //   if (!prop) return;
+  //   callback(prop.key);
+  // }, [selectedOption, callback, options]);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
