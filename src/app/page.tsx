@@ -1,6 +1,7 @@
 import { BannersSection } from "@/components/BannersSection";
 import { BonusBuySection } from "@/components/BonusBuySection";
 import { BuyNowSection } from "@/components/BuyNowSection";
+import { CasinoDescriptionSection } from "@/components/CasinoDescriptionSection";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { FiltersSection } from "@/components/FiltersSection";
 import { HotGamesSection } from "@/components/HotGamesSection";
@@ -34,6 +35,7 @@ export default function Home() {
         <ProvidersSection />
       </WithCarouselSuspense>
       <BuyNowSection />
+      <CasinoDescriptionSection />
     </div>
   );
 }
