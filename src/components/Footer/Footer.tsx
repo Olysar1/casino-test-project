@@ -2,6 +2,7 @@ import { FC, useMemo } from "react";
 import Minimap from "./Minimap";
 import FooterPayments from "./FooterPayments";
 import Image from "next/image";
+import Rights from "./Rights";
 
 const Footer: FC = () => {
   const gamesMinimapList = useMemo(
@@ -61,7 +62,7 @@ const Footer: FC = () => {
 
   return (
     <div className="w-full bg-casino-darker px-[20px] lg:px-0">
-      <div className="w-full p-[10px] md:w-[700px] xl:w-[1200px] mx-auto h-[1417px] lg:h-[517px]">
+      <div className="w-full p-[10px] md:w-[700px] xl:w-[1200px] mx-auto">
         <div className="w-full flex flex-col lg:flex-row items-start gap-[41px] lg:gap-[46px] py-[35px]">
           <div className="flex flex-col justify-start gap-[10px] lg:gap-[13px] w-full lg:w-[300px]">
             <div className="w-[60px] h-[32px] lg:w-[75px] lg:h-[40px] rounded-[5px] bg-casino-light" />
@@ -95,7 +96,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <FooterPayments />
-        <div className="flex items-center justify-end lg:justify-center w-full py-[25px]">
+        <div className="flex items-center justify-center lg:justify-end w-full py-[25px] lg:py-[10px]">
           <Image
             src="/svg/legal-logos.svg"
             alt="legal-logos"
@@ -103,6 +104,7 @@ const Footer: FC = () => {
             height={35}
           />
         </div>
+        <Rights />
       </div>
     </div>
   );
