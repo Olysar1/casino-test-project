@@ -95,6 +95,14 @@ const Footer: FC = () => {
           </div>
         </div>
         <FooterPayments />
+        <div className="flex items-center justify-end lg:justify-center w-full py-[25px]">
+          <Image
+            src="/svg/legal-logos.svg"
+            alt="legal-logos"
+            width={170}
+            height={35}
+          />
+        </div>
       </div>
     </div>
   );
