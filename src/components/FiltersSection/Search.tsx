@@ -13,7 +13,6 @@ const Search: FC<ISearchProps> = ({ callback }) => {
   const debouncedQuery = useDebounce({ query });
 
   useEffect(() => {
-    if (!debouncedQuery) return;
     callback(debouncedQuery);
   }, [debouncedQuery, callback]);
 
