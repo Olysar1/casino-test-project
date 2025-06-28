@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileFloatingMenu } from "@/components/MobileFloatingMenu";
+import { SidebarMenu } from "@/components/SidebarMenu";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,12 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased text-white bg-casino-mid pb-[60px] md:pb-0`}
+        className={`${poppins.variable} antialiased text-white bg-casino-mid pb-[60px] pl-0 md:pl-[60px] md:pb-0`}
       >
         <Header />
         {children}
         <Footer />
-        <MobileFloatingMenu />
+        <div>
+          <SidebarMenu />
+          <MobileFloatingMenu />
+        </div>
       </body>
     </html>
   );
